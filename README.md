@@ -1,119 +1,76 @@
-# Flowchart Generator Skill for Trae
+# Flowchart Generator Skill
 
-[English](#english) | [中文](#chinese)
+**English** | [中文](#中文)
 
-<a name="english"></a>
+A powerful, universal AI skill designed to generate high-quality 2D flowcharts from natural language descriptions. This skill follows a rigorous 6-step process to ensure accuracy, clarity, and aesthetic appeal.
 
-## 🇬🇧 English
-
-This is an AI Skill built for **Trae IDE**, designed to automatically generate clear 2D flowcharts (in SVG format) from simple natural language descriptions.
-
-### ✨ Features
-
-- **Text-Driven**: Simply describe your process in text—no manual dragging or drawing required.
-- **Auto-Layout**: Generates flowcharts based on plaintext wireframes, ensuring logical and readable structures.
-- **SVG Export**: Produces high-quality vector graphics, perfect for embedding in documents or websites.
-- **Multi-Language Support**: Supports input in English, Chinese, and other languages. The text in the generated chart matches your input language.
-
-### 🚀 How to Use
-
-In the Trae IDE chat interface, you can trigger this skill using keywords like:
-
-- **"Help me draw a flowchart for..."**
-- **"Generate a framework diagram for..."**
-- **"Visualize the process of..."**
-
-#### Example
-
-**User Input:**
-> "Generate a user registration and login flowchart, including inputting credentials, validation, success redirect, and retry on failure."
-
-**Skill Execution Flow:**
-1. **Analyze Input**: Understands the user's intent and process logic.
-2. **Generate Wireframe**: Outputs a text-based draft for confirmation.
-3. **Generate SVG**: Creates the final SVG file based on the draft.
-4. **Deliver Result**: Displays the generated file path directly in the chat.
-
-### 🛠️ Installation & Configuration
-
-To use this skill, clone this repository into your Trae skills directory (refer to the Trae official documentation for the specific path).
-
-```bash
-git clone https://github.com/ZeroxZhang/flowchart-generator-skill.git
-```
-
-### 📝 Skill Definition
-
-The core definition of this skill is as follows (see `SKILL.md`):
-
-```yaml
-name: "flowchart-generator"
-description: "Generates 2D flowcharts from text descriptions. Invoke when user mentions 'flowchart' or 'framework diagram'."
-```
-
-### 🤝 Contributing
-
-Contributions via Issues or Pull Requests are welcome!
-
-### 📄 License
-
-MIT License
+> **Universal Compatibility**: This skill is designed to work with **any AI Agent or Intelligent IDE** (e.g., Trae, Cursor, Windsurf, AutoGPT, etc.) that supports prompt-based skill execution or function calling.
 
 ---
 
-<a name="chinese"></a>
+## 🚀 Features
 
-## 🇨🇳 中文
+- **End-to-End Generation**: Converts raw text into a professional SVG flowchart.
+- **Structured Workflow**: Uses a 6-step pipeline (Identify -> Optimize -> Deconstruct -> Wireframe -> Style -> SVG) to minimize errors.
+- **Visual Validation**: Includes a text-based wireframe step for user verification before final rendering.
+- **Adaptive Styling**: Automatically generates color palettes and layouts based on the content's context.
 
-这是一个为 **Trae IDE** 打造的 AI 技能（Skill），旨在通过简单的自然语言描述，自动生成清晰的 2D 流程图（SVG 格式）。
+## 🛠 Workflow
 
-### ✨ 功能特点
+The skill executes the following 6 steps sequentially:
 
-- **文本驱动**：只需输入文字描述，无需手动拖拽。
-- **自动布局**：基于文本线框图（Plaintext Wireframe）生成，逻辑结构一目了然。
-- **SVG 导出**：生成高质量的矢量图形，方便嵌入文档或网页。
-- **多语言支持**：支持中文、英文等多种语言输入，生成的图表文字与输入语言保持一致。
+1.  **Identify User Input**: Analyzes intent, subject matter, and constraints.
+2.  **Optimize User Input**: Expands and structures the narrative logically.
+3.  **Deconstruct Content**: Breaks down the narrative into dimensions, hierarchy, elements, and links.
+4.  **Generate Plaintext Wireframe**: Creates a text-based ASCII/grid blueprint for structural verification.
+5.  **Generate Style Scheme**: Defines colors, typography, and layout orientation.
+6.  **Generate SVG**: Produces the final standalone SVG file.
 
-### 🚀 如何使用
+## 📦 Installation & Usage
 
-在 Trae IDE 的对话框中，你可以通过以下关键词触发此技能：
+### For Trae / AI IDEs
+1.  Clone this repository into your skills directory (e.g., `~/.trae/skills/flowchart-generator`).
+2.  Reload your IDE or Agent.
+3.  **Trigger**: Ask the AI to "create a flowchart", "draw a process map", or "visualize this framework".
 
-- **"帮我画一个...流程图"**
-- **"生成一个...框架图"**
-- **"可视化一下...的流程"**
+### For General LLM Agents
+You can copy the content of `SKILL.md` into your agent's system prompt or tool definition. The prompts within `SKILL.md` are designed to be model-agnostic.
 
-#### 示例
+---
 
-**用户输入：**
-> "生成一个用户注册登录的流程图，包含输入账号密码、验证、成功跳转和失败重试。"
+<a name="中文"></a>
+# 流程图生成技能 (Flowchart Generator Skill)
 
-**Skill 执行流程：**
-1. **分析输入**：理解用户意图和流程逻辑。
-2. **生成线框图**：先输出一个文本版的草图供确认。
-3. **生成 SVG**：根据草图生成最终的 SVG 文件。
-4. **交付结果**：直接在对话中展示生成的文件路径。
+[English](#flowchart-generator-skill) | **中文**
 
-### 🛠️ 安装与配置
+一个强大的通用 AI 技能，旨在将自然语言描述转化为高质量的 2D 流程图。该技能遵循严谨的 6 步流程，以确保生成的图表准确、清晰且美观。
 
-要使用此技能，请将本仓库克隆到你的 Trae 技能目录中（具体路径请参考 Trae 官方文档）。
+> **通用兼容性**：此技能专为**所有 AI 智能体 (Agent) 和智能 IDE**（如 Trae, Cursor, Windsurf, AutoGPT 等）设计，只要支持基于提示词的技能执行或函数调用即可使用。
 
-```bash
-git clone https://github.com/ZeroxZhang/flowchart-generator-skill.git
-```
+## 🚀 特性
 
-### 📝 技能定义 (Skill Definition)
+- **端到端生成**：将原始文本直接转化为专业的 SVG 流程图。
+- **结构化工作流**：采用 6 步流水线（识别 -> 优化 -> 解构 -> 线框图 -> 样式 -> SVG），最大程度减少错误。
+- **视觉验证**：包含基于文本的线框图步骤，供用户在最终渲染前进行结构验证。
+- **自适应样式**：根据内容上下文自动生成配色方案和布局。
 
-该技能的核心定义如下（详见 `SKILL.md`）：
+## 🛠 工作流程
 
-```yaml
-name: "flowchart-generator"
-description: "Generates 2D flowcharts from text descriptions. Invoke when user mentions 'flowchart' or 'framework diagram'."
-```
+该技能按顺序执行以下 6 个步骤：
 
-### 🤝 贡献
+1.  **识别用户输入 (Identify)**：分析用户意图、主题和约束条件。
+2.  **优化用户输入 (Optimize)**：扩展并逻辑化梳理用户的叙述内容。
+3.  **解构内容 (Deconstruct)**：将叙述拆解为维度、层级、元素和链路。
+4.  **生成纯文本线框图 (Wireframe)**：创建基于 ASCII/网格的文本蓝图，用于结构验证。
+5.  **生成样式方案 (Style)**：定义配色、排版和布局方向。
+6.  **生成 SVG (Generate SVG)**：输出最终独立的 SVG 文件。
 
-欢迎提交 Issue 或 Pull Request 来改进此技能！
+## 📦 安装与使用
 
-### 📄 许可证
+### 对于 Trae / 智能 IDE
+1.  将本仓库克隆到您的技能目录中（例如 `~/.trae/skills/flowchart-generator`）。
+2.  重载您的 IDE 或 Agent。
+3.  **触发方式**：直接让 AI “生成流程图”、“绘制流程映射”或“可视化这个框架”。
 
-MIT License
+### 对于通用 LLM 智能体
+您可以将 `SKILL.md` 的内容复制到您的 Agent 系统提示词 (System Prompt) 或工具定义中。`SKILL.md` 中的提示词设计为模型无关，可通用。
