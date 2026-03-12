@@ -120,7 +120,7 @@ The skill operates through the following 6 phases:
 dashchart_skill/
 ├── SKILL.md                 # Core instruction file (Standard format)
 ├── README.md                # Documentation
-├── instrucktion.md          # Detailed architecture notes
+├── instruction.md           # Detailed architecture notes
 ├── ai-marketing-smart-flowchart.svg # Example output
 ├── scripts/                 # Validation tools
 │   ├── validate_structure.py
@@ -251,7 +251,7 @@ OpenCode 支持标准的 Agent Skill 路径。
 dashchart_skill/
 ├── SKILL.md                 # 核心指令文件 (标准格式)
 ├── README.md                # 使用文档
-├── instrucktion.md          # 详细架构笔记
+├── instruction.md           # 详细架构笔记
 ├── ai-marketing-smart-flowchart.svg # 案例图片
 ├── scripts/                 # 验证工具
 │   ├── validate_structure.py
