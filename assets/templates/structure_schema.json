@@ -1,0 +1,57 @@
+{
+  "_comment": "Phase 3 输出模板 — 流程结构数据 JSON Schema",
+  "_version": "1.0.0",
+
+  "metadata": {
+    "title": "流程名称（必填）",
+    "subtitle": "一句话概述（可选）",
+    "footnote": "备注说明（可选）",
+    "author": "",
+    "date": ""
+  },
+
+  "config": {
+    "direction": "TB | LR",
+    "total_nodes": 0,
+    "total_edges": 0,
+    "has_branch": false,
+    "has_loop": false,
+    "has_parallel": false,
+    "grid_rows": 0,
+    "grid_cols": 0
+  },
+
+  "nodes": [
+    {
+      "id": "node_01",
+      "type": "terminal | process | decision | io | subprocess",
+      "label": "节点标签（≤15中文字符）",
+      "description": "详细描述（可选，不会渲染到图中）",
+      "group": "分组名称（可选，用于泳道或分区）",
+      "position": {
+        "row": 0,
+        "col": 0
+      }
+    }
+  ],
+
+  "edges": [
+    {
+      "id": "edge_01",
+      "from": "node_01",
+      "to": "node_02",
+      "label": "分支条件标签（顺序边留空）",
+      "type": "normal | conditional",
+      "line_style": "solid | dashed"
+    }
+  ],
+
+  "annotations": [
+    {
+      "id": "anno_01",
+      "target_node": "node_03",
+      "text": "注释文字",
+      "position": "right | left | top | bottom"
+    }
+  ]
+}

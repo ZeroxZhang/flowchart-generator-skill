@@ -1,0 +1,147 @@
+{
+  "_comment": "Phase 5 输出模板 — 视觉设计方案 JSON Schema",
+  "_version": "1.0.0",
+
+  "canvas": {
+    "background": "#FFFFFF",
+    "padding": 50
+  },
+
+  "palette": {
+    "name": "方案名称",
+    "primary": "#3B82F6",
+    "primary_light": "#EFF6FF",
+    "secondary": "#10B981",
+    "secondary_light": "#ECFDF5",
+    "accent": "#F59E0B",
+    "accent_light": "#FEF3C7",
+    "neutral": "#64748B",
+    "neutral_light": "#F1F5F9",
+    "text_dark": "#1E293B",
+    "text_medium": "#475569",
+    "text_light": "#94A3B8",
+    "border": "#CBD5E1",
+    "connector": "#94A3B8",
+    "shadow": "rgba(0, 0, 0, 0.08)"
+  },
+
+  "typography": {
+    "font_family": "'PingFang SC', 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif",
+    "title": {
+      "font_size": 22,
+      "font_weight": 700,
+      "color": "palette.text_dark",
+      "letter_spacing": 1
+    },
+    "subtitle": {
+      "font_size": 13,
+      "font_weight": 400,
+      "color": "palette.text_light"
+    },
+    "node_label": {
+      "font_size": 13,
+      "font_weight": 500,
+      "color": "palette.text_dark"
+    },
+    "edge_label": {
+      "font_size": 11,
+      "font_weight": 500,
+      "color": "palette.text_medium"
+    },
+    "footnote": {
+      "font_size": 11,
+      "font_weight": 400,
+      "color": "palette.text_light",
+      "font_style": "italic"
+    }
+  },
+
+  "node_styles": {
+    "terminal": {
+      "min_width": 120,
+      "height": 44,
+      "rx": 22,
+      "fill": "palette.primary",
+      "stroke": "none",
+      "stroke_width": 0,
+      "text_color": "#FFFFFF",
+      "shadow": true,
+      "padding_h": 24,
+      "padding_v": 10
+    },
+    "process": {
+      "min_width": 150,
+      "height": 52,
+      "rx": 8,
+      "fill": "#FFFFFF",
+      "stroke": "palette.primary",
+      "stroke_width": 1.5,
+      "text_color": "palette.text_dark",
+      "shadow": true,
+      "padding_h": 20,
+      "padding_v": 12
+    },
+    "decision": {
+      "min_width": 110,
+      "height": 70,
+      "fill": "palette.accent_light",
+      "stroke": "palette.accent",
+      "stroke_width": 1.5,
+      "text_color": "#92400E",
+      "shadow": true,
+      "shape": "diamond"
+    },
+    "io": {
+      "min_width": 150,
+      "height": 52,
+      "skew_offset": 12,
+      "fill": "palette.secondary_light",
+      "stroke": "palette.secondary",
+      "stroke_width": 1.5,
+      "text_color": "#065F46",
+      "shadow": true,
+      "shape": "parallelogram"
+    },
+    "subprocess": {
+      "min_width": 150,
+      "height": 52,
+      "rx": 8,
+      "fill": "palette.primary_light",
+      "stroke": "palette.primary",
+      "stroke_width": 1.5,
+      "text_color": "#1E40AF",
+      "shadow": true,
+      "inner_border": true,
+      "inner_border_offset": 6
+    }
+  },
+
+  "edge_styles": {
+    "stroke_width": 1.5,
+    "stroke_color": "palette.connector",
+    "marker_size": 7,
+    "marker_fill": "palette.connector",
+    "routing": "orthogonal",
+    "corner_radius": 5,
+    "label_bg": "#FFFFFF",
+    "label_bg_padding": 3
+  },
+
+  "layout": {
+    "direction": "TB",
+    "node_gap_vertical": 70,
+    "node_gap_horizontal": 60,
+    "title_margin_bottom": 30,
+    "footnote_margin_top": 30,
+    "group_padding": 20
+  },
+
+  "effects": {
+    "shadow_filter": {
+      "dx": 0,
+      "dy": 2,
+      "std_deviation": 4,
+      "flood_color": "palette.shadow"
+    }
+  }
+}
