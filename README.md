@@ -95,7 +95,7 @@ dashchart_skill/
 
 ### 📄 License
 
-Project is open-source.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
@@ -182,4 +182,4 @@ dashchart_skill/
 
 ### 📄 许可证
 
-本项目开源。
+本项目基于 MIT 协议开源 - 详情请参阅 [LICENSE](LICENSE) 文件。
