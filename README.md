@@ -69,15 +69,15 @@ Download the latest [ZIP archive](https://github.com/ZeroxZhang/flowchart-genera
 - **Cursor / Trae**:
   - Create or edit `.cursorrules` (or `.trae/rules`) in your project root.
   - Append the content of `SKILL.md`.
-  - *Alternative*: If the IDE has file access, simply tell it: "Read `dashchart_skill/SKILL.md` and use it to generate flowcharts."
+  - *Alternative*: If the IDE has file access, simply tell it: "Read `flowchart-generator-skill/SKILL.md` and use it to generate flowcharts."
 
 #### 3. Agent Frameworks
 
 ##### **OpenClaw**
 OpenClaw automatically discovers skills in its workspace directory.
-1. Copy the `dashchart_skill` folder to your OpenClaw skills directory (usually `~/.openclaw/workspace/skills/`).
+1. Copy the `flowchart-generator-skill` folder to your OpenClaw skills directory (usually `~/.openclaw/workspace/skills/`).
    ```bash
-   cp -r dashchart_skill ~/.openclaw/workspace/skills/
+   cp -r flowchart-generator-skill ~/.openclaw/workspace/skills/
    ```
 2. Restart your OpenClaw Gateway or say "refresh skills" to the agent.
 3. Usage: "Use the Smart Flowchart Generator to create a diagram..."
@@ -86,11 +86,11 @@ OpenClaw automatically discovers skills in its workspace directory.
 Claude Code looks for skills in the `.claude/skills` directory.
 1. Create the skills directory if it doesn't exist:
    ```bash
-   mkdir -p .claude/skills/dashchart_skill
+   mkdir -p .claude/skills/flowchart-generator-skill
    ```
 2. Copy `SKILL.md` to this directory:
    ```bash
-   cp dashchart_skill/SKILL.md .claude/skills/dashchart_skill/
+   cp flowchart-generator-skill/SKILL.md .claude/skills/flowchart-generator-skill/
    ```
 3. Usage: Claude Code will automatically load the skill when relevant context is detected.
 
@@ -98,8 +98,8 @@ Claude Code looks for skills in the `.claude/skills` directory.
 OpenCode supports standard agent skill paths.
 1. Copy the skill to the global config directory:
    ```bash
-   mkdir -p ~/.config/opencode/skills/dashchart_skill
-   cp dashchart_skill/SKILL.md ~/.config/opencode/skills/dashchart_skill/
+   mkdir -p ~/.config/opencode/skills/flowchart-generator-skill
+   cp flowchart-generator-skill/SKILL.md ~/.config/opencode/skills/flowchart-generator-skill/
    ```
 2. Usage: The skill is now available globally to all OpenCode agents.
 
@@ -117,7 +117,7 @@ The skill operates through the following 6 phases:
 ### 📂 File Structure
 
 ```text
-dashchart_skill/
+flowchart-generator-skill/
 ├── SKILL.md                 # Core instruction file (Standard format)
 ├── README.md                # Documentation
 ├── instruction.md           # Detailed architecture notes
@@ -200,15 +200,15 @@ git clone https://github.com/ZeroxZhang/flowchart-generator-skill.git
 - **Cursor / Trae**:
   - 在项目根目录创建或编辑 `.cursorrules` (或 `.trae/rules`) 文件。
   - 将 `SKILL.md` 的内容追加进去。
-  - *替代方案*：如果 IDE 支持读取本地文件，直接在对话中指令：“读取 `dashchart_skill/SKILL.md` 并用它生成流程图。”
+  - *替代方案*：如果 IDE 支持读取本地文件，直接在对话中指令：“读取 `flowchart-generator-skill/SKILL.md` 并用它生成流程图。”
 
 #### 3. Agent 框架集成
 
 ##### **OpenClaw**
 OpenClaw 会自动发现其工作区目录中的 Skill。
-1. 将 `dashchart_skill` 文件夹复制到 OpenClaw 的 skills 目录（通常为 `~/.openclaw/workspace/skills/`）。
+1. 将 `flowchart-generator-skill` 文件夹复制到 OpenClaw 的 skills 目录（通常为 `~/.openclaw/workspace/skills/`）。
    ```bash
-   cp -r dashchart_skill ~/.openclaw/workspace/skills/
+   cp -r flowchart-generator-skill ~/.openclaw/workspace/skills/
    ```
 2. 重启 OpenClaw Gateway 或对 Agent 说 "refresh skills"。
 3. 使用：“使用智能流程图生成器帮我画一张图...”
@@ -217,11 +217,11 @@ OpenClaw 会自动发现其工作区目录中的 Skill。
 Claude Code 会在 `.claude/skills` 目录中查找 Skill。
 1. 创建 skills 目录（如果不存在）：
    ```bash
-   mkdir -p .claude/skills/dashchart_skill
+   mkdir -p .claude/skills/flowchart-generator-skill
    ```
 2. 将 `SKILL.md` 复制到该目录：
    ```bash
-   cp dashchart_skill/SKILL.md .claude/skills/dashchart_skill/
+   cp flowchart-generator-skill/SKILL.md .claude/skills/flowchart-generator-skill/
    ```
 3. 使用：当检测到相关意图时，Claude Code 会自动加载该 Skill。
 
@@ -229,8 +229,8 @@ Claude Code 会在 `.claude/skills` 目录中查找 Skill。
 OpenCode 支持标准的 Agent Skill 路径。
 1. 将 Skill 复制到全局配置目录：
    ```bash
-   mkdir -p ~/.config/opencode/skills/dashchart_skill
-   cp dashchart_skill/SKILL.md ~/.config/opencode/skills/dashchart_skill/
+   mkdir -p ~/.config/opencode/skills/flowchart-generator-skill
+   cp flowchart-generator-skill/SKILL.md ~/.config/opencode/skills/flowchart-generator-skill/
    ```
 2. 使用：该 Skill 现在对所有 OpenCode Agent 全局可用。
 
@@ -248,7 +248,7 @@ OpenCode 支持标准的 Agent Skill 路径。
 ### 📂 文件结构
 
 ```text
-dashchart_skill/
+flowchart-generator-skill/
 ├── SKILL.md                 # 核心指令文件 (标准格式)
 ├── README.md                # 使用文档
 ├── instruction.md           # 详细架构笔记
