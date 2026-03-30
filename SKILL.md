@@ -1,5 +1,5 @@
 ---
-name:smart flowchart generator
+name: smart flowchart generator
 description: 从自然语言生成精美 SVG 流程图。支持自然语言、列表、伪代码等输入，通过六阶段流水线生成专业流程图。Use when user asks to create "flowchart", "流程图", "flow diagram", or "流程图生成".
 version: 1.1.0
 author: zeroxzhang.cc
