@@ -1,7 +1,7 @@
 ---
 name: smart_flowchart_generator
 description: 从自然语言生成精美 SVG 流程图。支持自然语言、列表、伪代码等输入，通过六阶段流水线生成专业流程图。Use when user asks to create "flowchart", "流程图", "flow diagram", or "流程图生成".
-version: 1.1.0
+version: 1.2.0
 author: zeroxzhang.cc
 tags: [svg, flowchart, visualization, design]
 ---
@@ -10,13 +10,13 @@ tags: [svg, flowchart, visualization, design]
 
 ## META
 - skill_id: flowchart-generator
-- version: 1.1.0
+- version: 1.2.0
 - author: zeroxzhang.cc
 - output_format: SVG
 - language: zh-CN / en (auto-detect)
 - max_nodes: 30
 - min_steps: 2
-- last_updated: 2026-03-26
+- last_updated: 2026-03-31
 - changes: 新增 Phase 6.1 布局规划规范，解决多区域重叠问题
 
 ---

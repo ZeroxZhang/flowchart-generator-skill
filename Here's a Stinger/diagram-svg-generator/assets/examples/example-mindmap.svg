@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 1000 650"
+     width="1000" height="650"
+     role="img" aria-labelledby="diagram-title diagram-desc">
+
+  <title id="diagram-title">Project Management Mind Map</title>
+  <desc id="diagram-desc">A mind map showing four key areas of project management: Planning, Execution, Monitoring, and Closure, each with sub-topics.</desc>
+
+  <defs>
+    <style>
+      .bg { fill: #FAFAFA; }
+      .central { fill: #1A73E8; rx: 18; }
+      .branch-a { fill: #34A853; rx: 12; }
+      .branch-b { fill: #EA4335; rx: 12; }
+      .branch-c { fill: #FBBC04; rx: 12; }
+      .branch-d { fill: #9C27B0; rx: 12; }
+      .leaf { fill: #FFFFFF; stroke: #DADCE0; stroke-width: 1.5; rx: 8; }
+      .text-center { fill: #FFF; font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; text-anchor: middle; dominant-baseline: central; }
+      .text-branch { fill: #FFF; font-family: Arial, sans-serif; font-size: 13px; font-weight: bold; text-anchor: middle; dominant-baseline: central; }
+      .text-branch-dark { fill: #202124; font-family: Arial, sans-serif; font-size: 13px; font-weight: bold; text-anchor: middle; dominant-baseline: central; }
+      .text-leaf { fill: #202124; font-family: Arial, sans-serif; font-size: 11px; text-anchor: middle; dominant-baseline: central; }
+      .line-a { stroke: #34A853; stroke-width: 2.5; fill: none; stroke-linecap: round; }
+      .line-b { stroke: #EA4335; stroke-width: 2.5; fill: none; stroke-linecap: round; }
+      .line-c { stroke: #FBBC04; stroke-width: 2.5; fill: none; stroke-linecap: round; }
+      .line-d { stroke: #9C27B0; stroke-width: 2.5; fill: none; stroke-linecap: round; }
+      .line-leaf { stroke: #DADCE0; stroke-width: 1.5; fill: none; stroke-linecap: round; }
+      .title-text { fill: #1A73E8; font-family: Arial, sans-serif; font-size: 18px; font-weight: bold; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="100%" height="100%" />
+  <text class="title-text" x="500" y="30" text-anchor="middle">Project Management</text>
+
+  <g id="diagram-content" transform="translate(500, 325)">
+    <!-- Central Node -->
+    <rect class="central" x="-70" y="-25" width="140" height="50" />
+    <text class="text-center">Project Mgmt</text>
+
+    <!-- Branch A: Planning (top-right) -->
+    <path class="line-a" d="M 70,-10 C 140,-10 150,-110 210,-110" />
+    <g transform="translate(270, -110)">
+      <rect class="branch-a" x="-50" y="-18" width="100" height="36" />
+      <text class="text-branch">Planning</text>
+    </g>
+    <path class="line-leaf" d="M 320,-110 C 355,-110 355,-175 390,-175" />
+    <g transform="translate(440, -175)"><rect class="leaf" x="-45" y="-13" width="90" height="26" /><text class="text-leaf">Scope</text></g>
+    <path class="line-leaf" d="M 320,-110 C 355,-110 355,-140 390,-140" />
+    <g transform="translate(440, -140)"><rect class="leaf" x="-45" y="-13" width="90" height="26" /><text class="text-leaf">Schedule</text></g>
+    <path class="line-leaf" d="M 320,-110 C 355,-110 355,-105 390,-105" />
+    <g transform="translate(440, -105)"><rect class="leaf" x="-45" y="-13" width="90" height="26" /><text class="text-leaf">Budget</text></g>
+    <path class="line-leaf" d="M 320,-110 C 355,-110 355,-70 390,-70" />
+    <g transform="translate(440, -70)"><rect class="leaf" x="-45" y="-13" width="90" height="26" /><text class="text-leaf">Resources</text></g>
+
+    <!-- Branch B: Execution (bottom-right) -->
+    <path class="line-b" d="M 70,10 C 140,10 150,110 210,110" />
+    <g transform="translate(270, 110)">
+      <rect class="branch-b" x="-50" y="-18" width="100" height="36" />
+      <text class="text-branch">Execution</text>
+    </g>
+    <path class="line-leaf" d="M 320,110 C 355,110 355,80 390,80" />
+    <g transform="translate(440, 80)"><rect class="leaf" x="-45" y="-13" width="90" height="26" /><text class="text-leaf">Tasks</text></g>
+    <path class="line-leaf" d="M 320,110 C 355,110 355,115 390,115" />
+    <g transform="translate(440, 115)"><rect class="leaf" x="-45" y="-13" width="90" height="26" /><text class="text-leaf">Team</text></g>
+    <path class="line-leaf" d="M 320,110 C 355,110 355,150 390,150" />
+    <g transform="translate(440, 150)"><rect class="leaf" x="-45" y="-13" width="90" height="26" /><text class="text-leaf">Deliverables</text></g>
+
+    <!-- Branch C: Monitoring (top-left) -->
+    <path class="line-c" d="M -70,-10 C -140,-10 -150,-110 -210,-110" />
+    <g transform="translate(-270, -110)">
+      <rect class="branch-c" x="-50" y="-18" width="100" height="36" />
+      <text class="text-branch-dark">Monitoring</text>
+    </g>
+    <path class="line-leaf" d="M -320,-110 C -355,-110 -355,-150 -390,-150" />
+    <g transform="translate(-440, -150)"><rect class="leaf" x="-45" y="-13" width="90" height="26" /><text class="text-leaf">KPIs</text></g>
+    <path class="line-leaf" d="M -320,-110 C -355,-110 -355,-110 -390,-110" />
+    <g transform="translate(-440, -110)"><rect class="leaf" x="-45" y="-13" width="90" height="26" /><text class="text-leaf">Reports</text></g>
+    <path class="line-leaf" d="M -320,-110 C -355,-110 -355,-70 -390,-70" />
+    <g transform="translate(-440, -70)"><rect class="leaf" x="-45" y="-13" width="90" height="26" /><text class="text-leaf">Risks</text></g>
+
+    <!-- Branch D: Closure (bottom-left) -->
+    <path class="line-d" d="M -70,10 C -140,10 -150,110 -210,110" />
+    <g transform="translate(-270, 110)">
+      <rect class="branch-d" x="-50" y="-18" width="100" height="36" />
+      <text class="text-branch">Closure</text>
+    </g>
+    <path class="line-leaf" d="M -320,110 C -355,110 -355,80 -390,80" />
+    <g transform="translate(-440, 80)"><rect class="leaf" x="-45" y="-13" width="90" height="26" /><text class="text-leaf">Review</text></g>
+    <path class="line-leaf" d="M -320,110 C -355,110 -355,115 -390,115" />
+    <g transform="translate(-440, 115)"><rect class="leaf" x="-45" y="-13" width="90" height="26" /><text class="text-leaf">Handover</text></g>
+    <path class="line-leaf" d="M -320,110 C -355,110 -355,150 -390,150" />
+    <g transform="translate(-440, 150)"><rect class="leaf" x="-45" y="-13" width="90" height="26" /><text class="text-leaf">Lessons</text></g>
+  </g>
+</svg>

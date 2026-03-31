@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 1000 700"
+     width="1000" height="700"
+     role="img" aria-labelledby="diagram-title diagram-desc">
+
+  <title id="diagram-title">User Login Process Flowchart</title>
+  <desc id="diagram-desc">A flowchart depicting the user login authentication process with credential validation, 2FA check, and account lockout logic.</desc>
+
+  <defs>
+    <style>
+      .bg { fill: #FFFFFF; }
+      .node-rect { fill: #E8F0FE; stroke: #DADCE0; stroke-width: 2; rx: 8; ry: 8; }
+      .node-start { fill: #1A73E8; stroke: #1A73E8; rx: 20; ry: 20; }
+      .node-end-success { fill: #34A853; stroke: #34A853; rx: 20; ry: 20; }
+      .node-end-fail { fill: #EA4335; stroke: #EA4335; rx: 20; ry: 20; }
+      .node-decision { fill: #4285F4; stroke: #4285F4; }
+      .node-text { fill: #202124; font-family: Arial, sans-serif; font-size: 13px; text-anchor: middle; dominant-baseline: central; }
+      .node-text-light { fill: #FFFFFF; font-family: Arial, sans-serif; font-size: 13px; text-anchor: middle; dominant-baseline: central; }
+      .connector { stroke: #5F6368; stroke-width: 2; fill: none; marker-end: url(#arrow); }
+      .label { fill: #5F6368; font-family: Arial, sans-serif; font-size: 11px; text-anchor: middle; }
+      .title-text { fill: #1A73E8; font-family: Arial, sans-serif; font-size: 20px; font-weight: bold; }
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#5F6368" />
+    </marker>
+  </defs>
+
+  <rect class="bg" width="100%" height="100%" />
+
+  <!-- Title -->
+  <text class="title-text" x="500" y="35" text-anchor="middle">User Login Process</text>
+
+  <g id="diagram-content" transform="translate(500, 80)">
+    <!-- START -->
+    <g id="start">
+      <rect class="node-start" x="-55" y="-18" width="110" height="36" />
+      <text class="node-text-light">Start</text>
+    </g>
+
+    <!-- Connector: start -> input -->
+    <line class="connector" x1="0" y1="18" x2="0" y2="58" />
+
+    <!-- Input credentials -->
+    <g id="input" transform="translate(0, 80)">
+      <rect class="node-rect" x="-90" y="-22" width="180" height="44" />
+      <text class="node-text">Enter Credentials</text>
+    </g>
+
+    <!-- Connector: input -> validate -->
+    <line class="connector" x1="0" y1="102" x2="0" y2="148" />
+
+    <!-- Decision: Valid? -->
+    <g id="validate" transform="translate(0, 180)">
+      <polygon class="node-decision" points="0,-32 65,0 0,32 -65,0" />
+      <text class="node-text-light">Valid?</text>
+    </g>
+
+    <!-- YES path: validate -> 2FA check -->
+    <line class="connector" x1="0" y1="212" x2="0" y2="268" />
+    <text class="label" x="14" y="240">Yes</text>
+
+    <!-- Decision: 2FA enabled? -->
+    <g id="twofa" transform="translate(0, 300)">
+      <polygon class="node-decision" points="0,-32 65,0 0,32 -65,0" />
+      <text class="node-text-light">2FA?</text>
+    </g>
+
+    <!-- YES 2FA: verify code -->
+    <line class="connector" x1="0" y1="332" x2="0" y2="378" />
+    <text class="label" x="14" y="356">Yes</text>
+
+    <g id="verify" transform="translate(0, 400)">
+      <rect class="node-rect" x="-80" y="-22" width="160" height="44" />
+      <text class="node-text">Verify 2FA Code</text>
+    </g>
+
+    <!-- Verify -> Success -->
+    <line class="connector" x1="0" y1="422" x2="0" y2="492" />
+    <text class="label" x="14" y="458">Pass</text>
+
+    <g id="success" transform="translate(0, 510)">
+      <rect class="node-end-success" x="-65" y="-18" width="130" height="36" />
+      <text class="node-text-light">Login Success</text>
+    </g>
+
+    <!-- NO 2FA: direct success -->
+    <polyline class="connector" points="65,300 200,300 200,382" />
+    <text class="label" x="130" y="292">No</text>
+
+    <g id="direct-ok" transform="translate(200, 400)">
+      <rect class="node-end-success" x="-55" y="-18" width="110" height="36" />
+      <text class="node-text-light">Success</text>
+    </g>
+
+    <!-- NO valid: increment attempts -->
+    <polyline class="connector" points="-65,180 -250,180 -250,238" />
+    <text class="label" x="-155" y="172">No</text>
+
+    <g id="increment" transform="translate(-250, 260)">
+      <rect class="node-rect" x="-70" y="-22" width="140" height="44" />
+      <text class="node-text">Attempts + 1</text>
+    </g>
+
+    <!-- Increment -> Locked check -->
+    <line class="connector" x1="-250" y1="282" x2="-250" y2="348" />
+
+    <g id="locked-check" transform="translate(-250, 380)">
+      <polygon class="node-decision" points="0,-32 65,0 0,32 -65,0" />
+      <text class="node-text-light" dy="-6">>=3</text>
+      <text class="node-text-light" dy="10">times?</text>
+    </g>
+
+    <!-- YES locked -->
+    <line class="connector" x1="-250" y1="412" x2="-250" y2="492" />
+    <text class="label" x="-238" y="452">Yes</text>
+
+    <g id="locked" transform="translate(-250, 510)">
+      <rect class="node-end-fail" x="-70" y="-18" width="140" height="36" />
+      <text class="node-text-light">Account Locked</text>
+    </g>
+
+    <!-- NO locked: retry -->
+    <polyline class="connector" points="-315,380 -400,380 -400,80 -90,80" />
+    <text class="label" x="-355" y="372">No</text>
+  </g>
+
+  <!-- Legend -->
+  <g id="legend" transform="translate(30, 660)">
+    <rect fill="#1A73E8" x="0" y="0" width="12" height="12" rx="6" />
+    <text class="node-text" text-anchor="start" x="18" y="10" font-size="10">Start/End</text>
+    <rect fill="#E8F0FE" stroke="#DADCE0" x="90" y="0" width="12" height="12" rx="3" stroke-width="1" />
+    <text class="node-text" text-anchor="start" x="108" y="10" font-size="10">Process</text>
+    <polygon fill="#4285F4" points="195,6 203,0 211,6 203,12" />
+    <text class="node-text" text-anchor="start" x="218" y="10" font-size="10">Decision</text>
+  </g>
+</svg>
